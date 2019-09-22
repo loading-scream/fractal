@@ -19,10 +19,23 @@
         canvas {
             display: block;
         }
+
+        p {
+            position: fixed;
+            right: 10px;
+            top: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
+    <p>
+        Zoomlevel: <span id="zoomlevel">1</span>x
+    </p>
     <canvas id="fractal" width="800" height="600"></canvas>
+</body>
 
 </html>

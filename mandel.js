@@ -21,10 +21,15 @@ function init() {
     //  values to the click handler.
     //
     window.onmousewheel = function (e) {
-        if (e.wheelDelta > 0)
+        var zoomdom = document.getElementById('zoomlevel');
+        if (e.wheelDelta > 0){
+            zoomdom.innerText *= 4;
             handleZoomIn(e.clientX, e.clientY);
-        else
+        }
+        else if(zoomdom.innerText > 1) {
+            zoomdom.innerText /= 4;
             handleZoomOut();
+        }
     };
     //
     // When you resize the browser window, we need
